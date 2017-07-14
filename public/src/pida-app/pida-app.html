@@ -1,0 +1,40 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-app.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-query.html">
+<link rel="import" href="pid-element.html">
+
+<dom-module id="pida-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <firebase-app
+      name="portal-platformers-player-id"
+      api-key="AIzaSyB13KsEQ3H6CohU1r_nI90pchrhFJaDCgk"
+      auth-domain="portal-platformers-player-id.firebaseapp.com"
+      database-url="https://portal-platformers-player-id.firebaseio.com">
+    </firebase-app>
+
+    <firebase-query
+      app-name="portal-platformers-player-id"
+      path="/users"
+      order-by-value="createDate"
+      data="{{users}}">
+    </firebase-query>
+
+    <h1>Portal Platformers Player ID - Admin</h1>
+
+    <template is="dom-repeat" items="{{users}}">
+      <pid-element user="{{item}}"></pid-element>
+    </template>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'pida-app'
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,39 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="pid-element">
+  <template>
+    <style include="iron-flex iron-flex-alignment">
+      :host {
+        display: block;
+        margin-bottom: 32px;
+      }
+
+      .images > div {
+        margin-right: 16px;
+      }
+    </style>
+
+    <h3>[[user.name]]</h3>
+    <div class="layout horizontal images">
+      <div>
+        <h4>Forward Image</h4>
+        <img src$="[[user.images.imageForward]]">
+      </div>
+      <div>
+        <h4>Action Image</h4>
+        <img src$="[[user.images.imageAction]]">
+      </div>
+      <div>
+        <h4>Dead Image</h4>
+        <img src$="[[user.images.imageDead]]">
+      </div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'pid-element'
+    });
+  </script>
+</dom-module>

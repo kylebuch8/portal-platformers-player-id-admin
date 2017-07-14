@@ -1,0 +1,6 @@
+{
+  "name": "portal-platformers-player-id-admin",
+  "short_name": "portal-platformers-player-id-admin",
+  "start_url": "/",
+  "display": "standalone"
+}

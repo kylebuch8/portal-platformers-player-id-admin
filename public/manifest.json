@@ -1,6 +1,6 @@
 {
-  "name": "portal-platformers-player-id-admin",
-  "short_name": "portal-platformers-player-id-admin",
+  "name": "Portal Platformers Player ID Admin",
+  "short_name": "Portal Platformers Player ID Admin",
   "start_url": "/",
   "display": "standalone"
 }
